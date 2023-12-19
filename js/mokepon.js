@@ -1,8 +1,13 @@
 let ataqueJugador 
 let ataqueEnemigo
-let resultadoBatalla 
+let vidaJugador = 3
+let vidaEnemigo = 3
 
 function iniciarJuego () {
+    let sectionElegirAtaque = document.getElementById('seleccion-ataque')
+    sectionElegirAtaque.style.display = 'none'
+
+
     let btnMascotas = document.getElementById('btn-mascotas')
     btnMascotas.addEventListener('click', seleccionarMascota)
 
@@ -14,9 +19,23 @@ function iniciarJuego () {
 
     let btnTierra = document.getElementById('btn-tierra')
     btnTierra.addEventListener('click', ataqueTierra)
+
+    let sectionReiniciar = document.getElementById('seccion-reiniciar')
+    sectionReiniciar.style.display = 'none'
+
+    let btnReiniciar = document.getElementById('btn-reiniciar')
+    btnReiniciar.addEventListener('click', reiniciar)
+
 }
 
 function seleccionarMascota () {
+
+    let sectionElegirMascota = document.getElementById('seleccion-mascota')
+    sectionElegirMascota.style.display = 'none'
+
+    let sectionElegirAtaque = document.getElementById('seleccion-ataque')
+    sectionElegirAtaque.style.display = 'block'
+
     let inputHipodoge = document.getElementById('hipodogue')
     let inputCapipepo = document.getElementById('capipepo')
     let inputRatigueya = document.getElementById('ratigueya')
@@ -94,16 +113,37 @@ function seleccionarAtaqueEnemigo () {
 }
 
 function batalla () {
+    let spanVidaJugador = document.getElementById('vida-jugador')
+    let spanVidaEnemigo = document.getElementById('vida-enemigo')
+
     if (ataqueJugador == ataqueEnemigo) {
         crearMensaje('EMPATASTE')
     } else if (ataqueJugador == 'FUEGO 🔥' && ataqueEnemigo == 'TIERRA 🌱') {
         crearMensaje('GANASTE')
-    } else if (ataqueEnemigo == 'TIERRA 🌱' && ataqueJugador == 'AGUA 💧') {
+        vidaEnemigo--
+        spanVidaEnemigo.innerHTML = vidaEnemigo
+    } else if (ataqueJugador == 'TIERRA 🌱' && ataqueEnemigo == 'AGUA 💧') {
         crearMensaje('GANASTE')
-    } else if (ataqueEnemigo == 'AGUA 💧' && ataqueJugador == 'FUEGO 🔥'){ 
+        vidaEnemigo--
+        spanVidaEnemigo.innerHTML = vidaEnemigo
+    } else if (ataqueJugador == 'AGUA 💧' && ataqueEnemigo == 'FUEGO 🔥'){ 
         crearMensaje('GANASTE')
+        vidaEnemigo--
+        spanVidaEnemigo.innerHTML = vidaEnemigo
     } else {
         crearMensaje('PERDISTE')
+        vidaJugador--
+        spanVidaJugador.innerHTML = vidaJugador
+    }
+
+    revisarVidas()
+}
+
+function revisarVidas () {
+    if (vidaEnemigo == 0) {
+        crearMensajeFinal ('HAS GANADO')
+    } else if (vidaJugador == 0) {
+        crearMensajeFinal ('EL ENEMIGO HA GANADO')
     }
 }
 
@@ -116,9 +156,33 @@ function crearMensaje (resultadoBatalla) {
     sectionMensaje.appendChild(parrafo)
 }
 
+function crearMensajeFinal (resultadoFinal) {
+    let sectionMensaje = document.getElementById('mensaje')
+    let parrafo = document.createElement('p')
+    
+    parrafo.innerHTML = resultadoFinal
+    
+    sectionMensaje.appendChild(parrafo)
+
+    let btnFuego = document.getElementById('btn-fuego')
+    btnFuego.disabled = true
+
+    let btnAgua = document.getElementById('btn-agua')
+    btnAgua.disabled = true
+
+    let btnTierra = document.getElementById('btn-tierra')
+    btnTierra.disabled = true
+
+    let sectionReiniciar = document.getElementById('seccion-reiniciar')
+    sectionReiniciar.style.display = 'block'
+}
+
+function reiniciar () {
+    location.reload()
+}
+
 function aleatorio (min, max) {
     return Math.floor (Math.random() * (max - min + 1) + min)
 }
-
 
 window.addEventListener('load', iniciarJuego)

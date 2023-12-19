@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokepon</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="js/mokepon.js"></script>
 </head>
+
 <body>
 
     <h1>Mokepon 🔥💧🌱</h1>
 
     <section id="seleccion-mascota">
         <h2>Selecciona tu mascota</h2>
-        
+
         <label for="hipodogue">Hipodogue</label>
         <input type="radio" name="mascotas" id="hipodogue">
-        
+
         <label for="capipepo">Capipepo</label>
         <input type="radio" name="mascotas" id="capipepo">
-        
+
         <label for="ratigueya">Ratigueya</label>
         <input type="radio" name="mascotas" id="ratigueya">
-        
-        <label for="langostelvis">Langostelvis</label>
+
+        <!-- <label for="langostelvis">Langostelvis</label>
         <input type="radio" name="mascotas" id="langostelvis">
         
         <label for="tucapalma">Tucapalma</label>
@@ -31,12 +34,12 @@
         <label for="pydos">Pydos</label>
         <input type="radio" name="mascotas" id="pydos">
 
-        Hipodogue --> Agua
-        Capipepo --> Tierra
-        Ratigueya --> Fuego
-        Langostelvis --> Agua y Fuego
-        Tucapalma --> Agua y Tierra
-        Pydos --> Tierra y Fuego
+        Hipodogue - Agua
+        Capipepo -- Tierra
+        Ratigueya -- Fuego
+        Langostelvis -- Agua y Fuego
+        Tucapalma -- Agua y Tierra
+        Pydos -- Tierra y Fuego -->
 
         <button id="btn-mascotas">Seleccionar</button>
     </section>
@@ -44,18 +47,21 @@
     <section id="seleccion-ataque">
         <h2>Seleeciona tu ataque</h2>
 
-        <p>Tu mascota <span id="tu-mascota"></span> tiene <span>3</span> vidas</p>
-        <p>La mascota <span id="mascota-enemiga"></span> de tu enemigo tiene <span>3</span> vidas</p>
+        <p>Tu mascota <span id="tu-mascota"></span> tiene <span id="vida-jugador">3</span> vidas</p>
+        <p>La mascota <span id="mascota-enemiga"></span> de tu enemigo tiene <span id="vida-enemigo">3</span> vidas</p>
 
         <button id="btn-fuego">Fuego 🔥</button>
         <button id="btn-agua">Agua 💧</button>
         <button id="btn-tierra">Tierra 🌱</button>
     </section>
-    
+
     <section id="mensaje">
 
     </section>
 
-    <button id="btn-reiniciar">Reiniciar</button>
+    <section id="seccion-reiniciar">
+        <button id="btn-reiniciar">Reiniciar</button>
+    </section>
 </body>
+
 </html>
