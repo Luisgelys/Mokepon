@@ -48,8 +48,8 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 110px;
-    height: 160px;
+    width: 140px;
+    height: 200px;
     padding: 5px;
     box-sizing: border-box;
     margin: 10px;
@@ -59,39 +59,52 @@ p {
     color: white;
  }
 
+ .tarjeta-mokepon:hover {
+   background-color: #0a2c58;
+   transform: scale(1.1);
+ }
+
  .tarjeta-mokepon img {
-    width: 90px;
+    width: 130px;
  }
 
  input {
     display: none;
  }
 
+ input:checked + label {
+   background: #071f3d;
+ }
+
  #btn-mascotas {
-    width: 140px;
-    height: 35px;
+    width: 170px;
+    height: 45px;
     padding: 5px;
     background-color: #FF9209;
     border-radius: 9px;
-    margin: 10px;
+    margin-top: 15px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Righteous', sans-serif;
     font-family: 'Sulphur Point', sans-serif;
     font-family: 'Urbanist', sans-serif;
  }
 
- #seleccion-ataque, #mensaje {
+ #seleccion-ataque {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     font-size: 25px;
     font-weight: bold;
-
  }
 
  #mensaje {
-    color: white;
+   width: 250px;
+   color: white;
+   border: 3px solid;
+   border-radius: 20px;
+   margin-top: 20px;
  }
 
  .btn-ataques {
@@ -103,7 +116,56 @@ p {
     border-radius: 9px;
     margin: 10px;
     width: 120px;
-    height: 40px;
+    height: 110px;
+ }
+
+ .btn-ataques:hover{
+   transform: scale(1.1);
+ }
+
+ #btn-fuego {
+   background-image: url(img/fuego.png);
+   background-repeat: no-repeat;
+   background-size:cover;
+   color:#FF9209 ;
+ }
+
+ #btn-agua {
+   background-image: url(img/agua.png);
+   background-repeat: no-repeat;
+   background-size:cover;
+ }
+
+ #btn-tierra {
+   background-image: url(img/tierra.png);
+   background-repeat: no-repeat;
+   background-size:cover;
+ }
+
+ .ataques {
+   display: grid;
+   grid-template-columns: 160px 160px;
+   margin: 15px;
+   border: 2px solid;
+   border-radius: 20px;
+   
+ }
+
+ .ataques p {
+   margin: 10px;
+ }
+
+ .ataque1, .ataque2 {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   color: white;
+   background: #0a2c58;
+ }
+
+ #vida-jugador, #vida-enemigo {
+   font-size: 40px;
+   color: #FF9209;
  }
 
  #seccion-reiniciar {
@@ -121,4 +183,13 @@ p {
     margin: 10px;
     width: 150px;
     height: 40px;
+ }
+
+ @media (max-width: 360px) {
+   .tarjetas {
+      flex-direction: column;
+   }
+   .subtitulo {
+      font-size: 25px;
+   }
  }
