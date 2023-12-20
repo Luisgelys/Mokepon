@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sulphur+Point&family=Urbanist:wght@100;200;300;400&display=swap');
+
+body {
+    background-image: url(./img/fondo.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: 'Righteous', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+}
+
+p {
+    margin: 15px;
+}
+
+#seleccion-mascota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ h1 {
+    color: white;
+    font-size: 60px;
+    margin: 80px 10px 25px 10px;
+    font-weight: bold;
+ }
+
+ .iconos {
+    font-size: 50px;
+    margin: 10px;
+ }
+
+ .subtitulo {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+ }
+
+ .tarjetas {
+    display: flex;
+ }
+
+ .tarjeta-mokepon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 160px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 10px;
+    background-color: #0C356A;
+    border: 1px solid;
+    border-radius: 10px;
+    color: white;
+ }
+
+ .tarjeta-mokepon img {
+    width: 90px;
+ }
+
+ input {
+    display: none;
+ }
+
+ #btn-mascotas {
+    width: 140px;
+    height: 35px;
+    padding: 5px;
+    background-color: #FF9209;
+    border-radius: 9px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Righteous', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+ }
+
+ #seleccion-ataque, #mensaje {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+
+ }
+
+ #mensaje {
+    color: white;
+ }
+
+ .btn-ataques {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Righteous', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+    border-radius: 9px;
+    margin: 10px;
+    width: 120px;
+    height: 40px;
+ }
+
+ #seccion-reiniciar {
+    text-align: center;
+ }
+
+ #btn-reiniciar {
+    font-weight: bold;
+    background-color: #FF9209;
+    font-size: 20px;
+    font-family: 'Righteous', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+    border-radius: 9px;
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+ }
