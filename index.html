@@ -7,7 +7,6 @@
     <title>Mokepon</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="js/mokepon.js"></script>
 </head>
 
 <body>
@@ -19,24 +18,7 @@
 
         <h2 class="subtitulo">Selecciona tu mascota</h2>
 
-        <div class="tarjetas">
-            <input type="radio" name="mascotas" id="hipodogue">
-            <label for="hipodogue" class="tarjeta-mokepon">
-                <p>Hipodogue</p>
-                <img src="img/mokepons_mokepon_hipodoge_attack.png" alt="Hipodogue">
-            </label>
-
-            <input type="radio" name="mascotas" id="capipepo">
-            <label for="capipepo" class="tarjeta-mokepon">
-                <p>Capipepo</p>
-                <img src="img/mokepons_mokepon_capipepo_attack.png" alt="Capipepo">
-            </label>
-
-            <input type="radio" name="mascotas" id="ratigueya">
-            <label for="ratigueya" class="tarjeta-mokepon">
-                <p>Ratigueya</p>
-                <img src="img/mokepons_mokepon_ratigueya_attack.png" alt="Ratigueya">
-            </label>
+        <div id='contenedor-tarjetas' class="tarjetas">
         </div>
 
         <!-- <label for="langostelvis">Langostelvis</label>
@@ -92,6 +74,7 @@
         </div>
     </section>
 
+    <script src="js/mokepon.js"></script>
 </body>
 
 </html>
